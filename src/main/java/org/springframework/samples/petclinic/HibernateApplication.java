@@ -15,9 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.samples.petclinic.model.Bill;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.Visit;
-import org.springframework.samples.repositories.BillRepository;
-import org.springframework.samples.repositories.PetRepository;
-import org.springframework.samples.repositories.VisitRepository;
+import org.springframework.samples.petclinic.repositories.BillRepository;
+import org.springframework.samples.petclinic.repositories.PetRepository;
+import org.springframework.samples.petclinic.repositories.VisitRepository;
 
 @SpringBootApplication
 public class HibernateApplication implements CommandLineRunner {

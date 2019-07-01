@@ -21,8 +21,8 @@ import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.others.PetTypeFormatter;
-import org.springframework.samples.repositories.OwnerRepository;
-import org.springframework.samples.repositories.PetRepository;
+import org.springframework.samples.petclinic.repositories.OwnerRepository;
+import org.springframework.samples.petclinic.repositories.PetRepository;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 

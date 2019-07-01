@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
-import org.springframework.samples.repositories.PetRepository;
+import org.springframework.samples.petclinic.repositories.PetRepository;
 import org.springframework.stereotype.Service;
 
 @Service

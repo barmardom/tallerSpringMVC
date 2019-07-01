@@ -28,6 +28,8 @@ import javax.persistence.TemporalType;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 /**
  * Simple JavaBean domain object representing a visit.
  *
@@ -125,6 +127,7 @@ public class Visit extends BaseEntity {
     // Hibernate
     
     @OneToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     private Bill bill;
 
 

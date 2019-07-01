@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Visit;
-import org.springframework.samples.repositories.VisitRepository;
+import org.springframework.samples.petclinic.repositories.VisitRepository;
 import org.springframework.stereotype.Service;
 
 @Service

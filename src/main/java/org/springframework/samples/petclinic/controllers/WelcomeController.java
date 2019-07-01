@@ -1,11 +1,11 @@
-package org.springframework.samples.petclinic.system;
+package org.springframework.samples.petclinic.controllers;
 
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-class WelcomeController {
+public class WelcomeController {
 
     @RequestMapping("/")
     public String welcome() {

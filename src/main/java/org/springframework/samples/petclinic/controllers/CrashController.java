@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.system;
+package org.springframework.samples.petclinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Also see how a view that resolves to "error" has been added ("error.html").
  */
 @Controller
-class CrashController {
+public class CrashController {
 
     @RequestMapping(value = "/oups", method = RequestMethod.GET)
     public String triggerException() {

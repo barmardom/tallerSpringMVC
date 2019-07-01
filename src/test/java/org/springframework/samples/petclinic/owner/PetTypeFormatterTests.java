@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.samples.petclinic.owner.PetRepository;
-import org.springframework.samples.petclinic.owner.PetType;
-import org.springframework.samples.petclinic.owner.PetTypeFormatter;
+import org.springframework.samples.petclinic.model.PetType;
+import org.springframework.samples.petclinic.others.PetTypeFormatter;
+import org.springframework.samples.repositories.PetRepository;
 
 /**
  * Test class for {@link PetTypeFormatter}

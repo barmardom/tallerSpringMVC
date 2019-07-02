@@ -44,18 +44,13 @@ public class BillController {
 	@Autowired
     private BillService billService;
     
-    
+    // localhost:8080/bills/
     @RequestMapping(value ="/bills", method=RequestMethod.GET)
     public List<Bill> findAll(){
     	return this.billService.findAll();
     }
 
-    /*@RequestMapping(value ="/bills/{idBill}", method=RequestMethod.GET)
-    public Bill findById(@PathVariable("idBill") Integer id){
-    	Bill b = this.billService.findById(id);
-    	return b;
-    }*/
-    
+    // localhost:8080/bills/79
     @RequestMapping(value ="/bills/{idBill}", method=RequestMethod.GET)
     public ResponseEntity<Bill> findById(@PathVariable("idBill") Integer id){
     	Bill b = new Bill();
@@ -75,7 +70,7 @@ public class BillController {
     	   "visit" : "1"
     	 }
     */
-    //localhost:8080/bills
+    // localhost:8080/bills
     @RequestMapping(value ="/bills", method=RequestMethod.POST)
     public ResponseEntity<Bill> create(@RequestBody @Valid Bill b){
     	b =  this.billService.save(b);
@@ -95,14 +90,14 @@ public class BillController {
     	   "visit" : "1"
     	 }
     */
-    //localhost:8080/bills/80
+    // localhost:8080/bills/80
     @RequestMapping(value ="/bills/{idBill}", method=RequestMethod.PUT)
     public Bill update(@PathVariable("idBill") Integer id, @RequestBody @Valid Bill b){
     	b =  this.billService.update(id, b);
     	return b;
     }
     
-    
+    // localhost:8080/bills/94
     @RequestMapping(value ="/bills/{idBill}", method=RequestMethod.DELETE)
     public ResponseEntity<Bill> delete(@PathVariable("idBill") Integer id){
     	Bill b =  this.billService.findById(id);
@@ -115,21 +110,17 @@ public class BillController {
 
     }
     
+    // localhost:8080/bills/
     @RequestMapping(value ="/bills", method=RequestMethod.DELETE)
     public void deleteAll(){
     	billService.deleteAll();
     }
     
     @RequestMapping(value ="/bills?filter=", method=RequestMethod.GET)
-    public ResponseEntity<List<Bill>> conseguirPagadas(@RequestParam("pagadas") String s){
-    	List<Bill> b = new ArrayList<Bill>();
+    public List<Bill> conseguirPagadas(@RequestParam("pagadas") String s){
+    	//List<Bill> b = new ArrayList<Bill>();
 
-    	b = billService.pagadadasNoPagadas(s);
-    	if(b != null) {
-    		return ResponseEntity.status(HttpStatus.OK).body(b);
-    	}else {
-    		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-    	}
+    	return billService.pagadadasNoPagadas(s);
     }
 
 
